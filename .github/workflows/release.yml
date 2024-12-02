@@ -31,6 +31,7 @@ jobs:
             label: arm64
 
     runs-on: ${{ matrix.arch }}
+    container: ${{ matrix.image }}
 
     steps:
     - uses: actions/checkout@v3
@@ -40,9 +41,9 @@ jobs:
       with:
         go-version: 1.23
 
-    - name: Build module
-        run: |
-          sudo -u testbot bash -lc 'make module'
+    - name: make module
+      run: |
+        sudo -u testbot bash -lc 'make module'
 
     - name: Upload ams module to registry
       uses: viamrobotics/upload-module@main
