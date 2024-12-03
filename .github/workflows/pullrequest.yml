@@ -9,10 +9,7 @@ on:
 
 jobs:
   test:
-    uses: viam-modules/ams/.github/workflows/test.yml@main
-    secrets:
-      MONGODB_TEST_OUTPUT_URI: ${{ secrets.MONGODB_TEST_OUTPUT_URI }}
-      DOCKER_PUBLIC_READONLY_PAT: ${{ secrets.DOCKER_PUBLIC_READONLY_PAT }}
+    uses: ./.github/workflows/test.yml
 
   license_finder:
     uses: ./.github/workflows/license_finder.yml
