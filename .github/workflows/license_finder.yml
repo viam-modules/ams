@@ -7,9 +7,9 @@ on:
 jobs:
   license_finder:
     name: Audit 3rd-Party Licenses
-    runs-on: [ubuntu-latest]
+    runs-on: buildjet-8vcpu-ubuntu-2204-arm
     container:
-      image: ghcr.io/viamrobotics/rdk-devenv:amd64-cache
+      image: ghcr.io/viamrobotics/rdk-devenv:arm64-cache
       options: --platform linux/amd64
     timeout-minutes: 30
 
