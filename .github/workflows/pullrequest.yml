@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    uses: ./.github/workflows/test.yml@main
+    uses: ./.github/workflows/test.yml
 
   license_finder:
-    uses: ./.github/workflows/license_finder.yml@main
+    uses: ./.github/workflows/license_finder.yml
