@@ -7,13 +7,18 @@ on:
 jobs:
   license_finder:
     name: Audit 3rd-Party Licenses
-    runs-on: [ubuntu-latest]
+    runs-on: buildjet-8vcpu-ubuntu-2204-arm
     container:
-      image: ghcr.io/viamrobotics/rdk-devenv:amd64-cache
+      image: ghcr.io/viamrobotics/rdk-devenv:arm64-cache
       options: --platform linux/amd64
     timeout-minutes: 30
 
     steps:
+    - name: Install license finder
+      if: github.event_name != 'pull_request_target'
+      run: |
+        apt-get install -y ruby && gem install license_finder
+
     - name: Check out code
       if: github.event_name != 'pull_request_target'
       uses: actions/checkout@v3
