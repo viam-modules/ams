@@ -15,4 +15,4 @@ jobs:
       DOCKER_PUBLIC_READONLY_PAT: ${{ secrets.DOCKER_PUBLIC_READONLY_PAT }}
 
   license_finder:
-    uses: ./.github/workflows/license_finder.yml
+    uses: viam-modules/ams/.github/workflows/license_finder.yml@main
