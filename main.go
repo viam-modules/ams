@@ -6,6 +6,7 @@ import (
 
 	"ams/as5048"
 
+
 	"go.viam.com/rdk/components/encoder"
 	"go.viam.com/rdk/logging"
 	"go.viam.com/rdk/module"
