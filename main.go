@@ -4,7 +4,7 @@ package main
 import (
 	"context"
 
-	"ams/as5048"
+	"github.com/viam-modules/ams/as5048"
 
 	"go.viam.com/rdk/components/encoder"
 	"go.viam.com/rdk/logging"
