@@ -1,4 +1,4 @@
-module ams
+module github.com/viam-modules/ams
 
 go 1.23.0
 
