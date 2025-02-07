@@ -2,16 +2,16 @@
 
 This [ams module](https://app.viam.com/module/viam/ams) implements an ams [as5048 encoder](https://ams.com/en/as5048a), an absolute encoder that uses an I<sup>2</sup>C or SPI interface to connect, using the [`rdk:component:encoder` API](https://docs.viam.com/appendix/apis/components/encoder/).
 
-> [!IMPORTANT]
-> Any [motor](https://docs.viam.com/components/motor/) using the `AMS-AS5048` encoder must have its `ticks_per_rotation` attribute configured as `1` because this encoder provides angular measurements directly.
-
-## Configure your as5048 encoder
-
 > [!NOTE]
 > Before configuring your encoder, you must [create a machine](https://docs.viam.com/cloud/machines/#add-a-new-machine).
 
 Navigate to the [**CONFIGURE** tab](https://docs.viam.com/configure/) of your [machine](https://docs.viam.com/fleet/machines/) in the [Viam app](https://app.viam.com/).
 [Add encoder / ams:as5048 to your machine](https://docs.viam.com/configure/#components).
+
+> [!IMPORTANT]
+> Any [motor](https://docs.viam.com/components/motor/) using the `AMS-AS5048` encoder must have its `ticks_per_rotation` attribute configured as `1` because this encoder provides angular measurements directly.
+
+## Configure your as5048 encoder
 
 On the new component panel, copy and paste the following attribute template into your encoder's attributes field:
 
