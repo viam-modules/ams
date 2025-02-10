@@ -36,9 +36,7 @@ The following attributes are available for `viam:ams:as5048` encoders:
 | `i2c_bus` | object | **Required** | The index of the I2C bus on the [board](https://docs.viam.com/components/board/) wired to this encoder.  Example: `"1"` |
 | `i2c_addr` | object | **Required** | The address of the bus. Example: `64` |
 
-## Example configuration
-
-### `viam:ams:as5048`
+### Example configuration
 
 ```json
   {
