@@ -7,7 +7,9 @@
   "models": [
     {
       "api": "rdk:component:encoder",
-      "model": "viam:ams:as5048"
+      "model": "viam:ams:as5048",
+      "short_description": "the ams as5048 absolute encoder",
+      "markdown_link": "README.md#configure-your-as5048-encoder"
     }
   ],
   "build": {
