@@ -1,6 +1,6 @@
 # [`ams` module](https://github.com/viam-modules/ams)
 
-This [ams module](https://app.viam.com/module/viam/ams) implements an ams [as5048 encoder](https://ams.com/en/as5048a), an absolute encoder that uses an I<sup>2</sup>C or SPI interface to connect, using the [`rdk:component:encoder` API](https://docs.viam.com/appendix/apis/components/encoder/).
+This [ams module](https://app.viam.com/module/viam/ams) implements an ams [as5048 encoder](https://ams.com/en/as5048a), an absolute encoder that uses an I2C or SPI interface to connect, using the [`rdk:component:encoder` API](https://docs.viam.com/appendix/apis/components/encoder/).
 
 > [!NOTE]
 > Before configuring your encoder, you must [create a machine](https://docs.viam.com/cloud/machines/#add-a-new-machine).
