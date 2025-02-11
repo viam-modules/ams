@@ -22,8 +22,8 @@ On the new component panel, copy and paste the following attribute template into
 }
 ```
 
-> [!IMPORTANT]
-> Any [motor](https://docs.viam.com/components/motor/) using the `AMS-AS5048` encoder must have its `ticks_per_rotation` attribute configured as `1` because this encoder provides angular measurements directly.
+**IMPORTANT**
+Any [motor](https://docs.viam.com/components/motor/) using the `AMS-AS5048` encoder must have its `ticks_per_rotation` attribute configured as `1` because this encoder provides angular measurements directly.
 
 ### Attributes
 
