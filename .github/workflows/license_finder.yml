@@ -7,7 +7,7 @@ on:
 jobs:
   license_finder:
     name: Audit 3rd-Party Licenses
-    runs-on: buildjet-8vcpu-ubuntu-2204-arm
+    runs-on: github-linux-arm64-8core
     container:
       image: ghcr.io/viamrobotics/rdk-devenv:arm64-cache
       options: --platform linux/arm64
