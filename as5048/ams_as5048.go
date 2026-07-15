@@ -55,30 +55,30 @@ type Config struct {
 
 // Validate checks the attributes of an initialized config
 // for proper values.
-func (conf *Config) Validate(path string) ([]string, error) {
+func (conf *Config) Validate(path string) ([]string, []string, error) {
 	var deps []string
 
 	connType := conf.ConnectionType
 	if len(connType) == 0 {
 		// TODO: stop defaulting to I2C when SPI support is implemented
 		conf.ConnectionType = i2cConn
-		// return nil, errors.New("must specify connection type")
+		// return nil, nil, errors.New("must specify connection type")
 	}
 	_, isSupported := supportedConnections[connType]
 	if !isSupported {
-		return nil, errors.Errorf("%s is not a supported connection type", connType)
+		return nil, nil, errors.Errorf("%s is not a supported connection type", connType)
 	}
 	if connType == i2cConn {
 		if conf.I2CConfig == nil {
-			return nil, errors.New("i2c selected as connection type, but no attributes supplied")
+			return nil, nil, errors.New("i2c selected as connection type, but no attributes supplied")
 		}
 		err := conf.I2CConfig.ValidateI2C(path)
 		if err != nil {
-			return nil, err
+			return nil, nil, err
 		}
 	}
 
-	return deps, nil
+	return deps, nil, nil
 }
 
 // I2CConfig stores the configuration information for I2C connection.
