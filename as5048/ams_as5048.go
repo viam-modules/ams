@@ -62,7 +62,7 @@ func (conf *Config) Validate(path string) ([]string, []string, error) {
 	if len(connType) == 0 {
 		// TODO: stop defaulting to I2C when SPI support is implemented
 		conf.ConnectionType = i2cConn
-		// return nil, nil, errors.New("must specify connection type")
+		// return nil, errors.New("must specify connection type")
 	}
 	_, isSupported := supportedConnections[connType]
 	if !isSupported {
