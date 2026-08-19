@@ -71,7 +71,7 @@ func setupDependencies(mockData []byte) (resource.Config, resource.Dependencies,
 }
 
 func TestAMSEncoder(t *testing.T) {
-	ctx := context.Background()
+	ctx := t.Context()
 
 	positionMockData := make([]byte, 256)
 	positionMockData[0xFE] = 100
@@ -146,7 +146,7 @@ func setupDependenciesWithWrite(mockData []byte, writeData map[byte]byte) (resou
 }
 
 func TestAMSEncoderReset(t *testing.T) {
-	ctx := context.Background()
+	ctx := t.Context()
 
 	positionMockData := make([]byte, 256)
 	positionMockData[0xFE] = 100
